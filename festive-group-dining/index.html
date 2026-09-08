@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Festive Group Dining | State Buildings, Perth</title>
+<meta name="description" content="Festive group dining at Long Chim, Petition, Post and Wildflower. State Buildings, Perth, 2 November to 30 December.">
+<link rel="icon" href="images/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="preload" as="image" href="images/hero-festive.jpg">
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/style.css">
+
+<!-- Google Tag Manager (same container as statebuildings.com) -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5KL7FBX');</script>
+<!-- End Google Tag Manager -->
+
+<style>
+/* ---------- Deadline bar ---------- */
+.topbar{position:fixed;top:0;left:0;right:0;z-index:101;background:var(--wine);color:var(--white);font-family:var(--font-grotesk);font-size:.8rem;letter-spacing:.04em;text-align:center;padding:.55rem var(--pad);display:none}
+.topbar.is-on{display:block}
+.topbar strong{font-weight:500}
+.topbar a{color:var(--white);text-decoration:underline;text-underline-offset:3px;margin-left:.5rem}
+body.has-topbar{padding-top:0}
+
+/* ---------- Nav ---------- */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:.85rem var(--pad);color:var(--white);transition:background .3s,color .3s,box-shadow .3s,top .3s}
+body.has-topbar .nav{top:34px}
+.nav.scrolled{background:var(--white);color:var(--black);box-shadow:0 1px 0 var(--rule)}
+.nav__logo{display:block;width:66px;color:inherit}
+.nav__logo svg{width:100%;height:auto;display:block}
+.nav .btn{padding:.7rem 1.2rem;font-size:.75rem}
+.nav:not(.scrolled) .btn{background:transparent;border-color:var(--white);color:var(--white)}
+.nav:not(.scrolled) .btn:hover{background:var(--white);color:var(--black)}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;color:var(--white);overflow:hidden;background:var(--black)}
+.hero__bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.45) 0%,rgba(0,0,0,.25) 35%,rgba(0,0,0,.82) 100%)}
+.hero__inner{position:relative;z-index:1;padding:8rem var(--pad) 4rem;width:100%;max-width:var(--container);margin:0 auto}
+.hero .label{color:rgba(255,255,255,.9)}
+.hero h1{color:var(--white);max-width:19ch;margin-bottom:1.25rem;font-size:clamp(2.1rem,4.6vw,3.9rem)}
+.hero p{color:rgba(255,255,255,.94);max-width:560px;font-size:clamp(1.05rem,1.5vw,1.3rem)}
+.hero__cta{display:flex;flex-wrap:wrap;gap:1rem;align-items:center;margin-top:1.75rem}
+.hero__proof{display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;margin-top:2rem;padding-top:1.25rem;border-top:1px solid rgba(255,255,255,.3);font-family:var(--font-grotesk);font-size:.8rem;letter-spacing:.05em;color:rgba(255,255,255,.85)}
+.hero__proof strong{color:var(--white);font-weight:500}
+.scroll-hint{display:none}
+
+/* ---------- Venue chips ---------- */
+.chips{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.5rem}
+.chip{font-family:var(--font-grotesk);font-size:.8rem;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;color:var(--black);border:1px solid var(--black);border-radius:999px;padding:.5rem 1.1rem;transition:background .2s,color .2s}
+.chip:hover{background:var(--black);color:var(--white)}
+
+/* ---------- Venue split blocks ---------- */
+.venue{padding:var(--section) 0;border-top:1px solid var(--rule)}
+.venue:first-of-type{border-top:0}
+.venue__split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,5rem);align-items:center}
+.venue:nth-of-type(even) .venue__media{order:2}
+.venue__media img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.venue__tag{font-family:var(--font-grotesk);font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--wine);margin-bottom:.75rem;display:block}
+.venue__meta{font-family:var(--font-grotesk);font-size:.85rem;color:var(--text-2);margin:1.25rem 0 0;padding-top:1.25rem;border-top:1px solid var(--rule);line-height:1.9}
+.venue__meta strong{color:var(--text);font-weight:500}
+.venue__note{font-size:.82rem;color:var(--text-2);margin-top:.75rem}
+.venue h2{margin-bottom:.75rem}
+.venue .btn{margin-top:1.5rem}
+
+/* ---------- Process ---------- */
+.steps{counter-reset:step;display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+.step{position:relative;padding-top:1.25rem;border-top:1px solid var(--black)}
+.step__n{font-family:var(--font-grotesk);font-size:.75rem;letter-spacing:.12em;margin-bottom:.75rem;display:block}
+.step h3{font-size:1.2rem;margin-bottom:.5rem}
+.step p{font-size:.95rem;color:var(--text-2);margin:0}
+
+/* ---------- Closing enquire ---------- */
+.enquire{background:var(--black);color:var(--white);text-align:center}
+.enquire h2{color:var(--white)}
+.enquire p{color:rgba(255,255,255,.85);max-width:560px;margin-left:auto;margin-right:auto}
+.enquire__contact{font-family:var(--font-grotesk);font-size:.95rem;line-height:1.9;margin-top:1.75rem}
+.enquire__contact a{color:var(--white);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.4)}
+.enquire .btn{margin-top:1.75rem}
+
+/* ---------- Footer ---------- */
+.footer{background:var(--sand);padding:3rem 0 2rem;font-size:.85rem;color:var(--text-2)}
+.footer__top{display:flex;justify-content:space-between;align-items:flex-start;gap:2rem;flex-wrap:wrap;margin-bottom:2rem}
+.footer__logo{width:80px;color:var(--black)}
+.footer__logo svg{width:100%;height:auto}
+.footer p{max-width:none}
+.footer small{display:block;font-size:.72rem;line-height:1.6;margin-top:1.5rem;color:var(--text-2)}
+.footer a{color:var(--black)}
+
+/* ---------- Responsive ---------- */
+@media (max-width:1024px){
+  .steps{grid-template-columns:repeat(1,1fr);max-width:520px;margin:0 auto}
+}
+@media (max-width:900px){
+  .venue__split{grid-template-columns:1fr}
+  .venue:nth-of-type(even) .venue__media{order:-1}
+  .venue__media{order:-1}
+  .hero__inner{padding-top:7rem}
+}
+@media (max-width:600px){
+  .topbar{font-size:.7rem;padding:.5rem .75rem;white-space:nowrap;overflow:hidden}.tb-long{display:none}
+  body.has-topbar .nav{top:30px}
+  .nav{padding:.6rem 1rem}
+  .nav__logo{width:56px}
+  .nav .btn{padding:.55rem .85rem;font-size:.65rem}
+  .hero{min-height:calc(100svh - 30px)}
+  .hero__inner{padding:6rem 1.25rem 3rem}
+  .hero h1{font-size:2.1rem}
+  .hero p{font-size:.95rem}
+  .hero__cta .btn{width:100%}
+  .hero__proof{flex-direction:column;gap:.4rem;font-size:.72rem}
+  .scroll-hint{display:block;text-align:center;font-family:var(--font-grotesk);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;padding:1rem 0 0;color:var(--text-2)}
+  .scroll-hint span{display:block;animation:bob 1.6s infinite}
+  @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
+  h2{font-size:1.55rem}
+  .section,.venue{padding:3.5rem 0}
+  .section-head{margin-bottom:2rem}
+  .btn{font-size:.8rem;padding:.85rem 1.3rem}
+  .footer__top{flex-direction:column;align-items:center;text-align:center}
+  .footer{text-align:center}
+}
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5KL7FBX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="topbar" id="topbar">
+  <strong>Festive Group Dining</strong> <span class="tb-long">runs 2 November to 30 December.</span> <span id="topbar-days"></span>
+  <a href="#venues">See the venues</a>
+</div>
+
+<header class="nav" id="nav">
+  <a class="nav__logo" href="https://statebuildings.com/" aria-label="State Buildings home">
+    <svg viewBox="0 0 171 51" fill="currentColor" aria-hidden="true"><use href="#sb-logo"/></svg>
+  </a>
+  <a class="btn" href="#venues">See the venues</a>
+</header>
+
+<section class="hero">
+  <img class="hero__bg" src="images/hero-festive.jpg" alt="A shared table of dishes at Long Chim, State Buildings, set for a group of friends" fetchpriority="high">
+  <div class="hero__inner">
+    <p class="label">Festive Group Dining. 2 November &ndash; 30 December</p>
+    <h1>The festive season, shared across four tables at State Buildings.</h1>
+    <p>Book your end-of-year celebration at Long Chim, Petition, Post or Wildflower. Menus built for sharing, groups of 10 or more, right through the season.</p>
+    <div class="hero__cta">
+      <a class="btn btn--light" href="#venues">See the venues <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn btn--outline" style="color:#fff;border-color:rgba(255,255,255,.6)" href="https://statebuildings.com/contact?utm_source=lp&amp;utm_medium=referral&amp;utm_campaign=festive-group-dining">Enquire now</a>
+    </div>
+    <div class="hero__proof">
+      <span><strong>4</strong> restaurants, one precinct</span>
+      <span>Groups of <strong>10 or more</strong></span>
+      <span><strong>2 Nov &ndash; 30 Dec</strong>, lunch and dinner</span>
+    </div>
+  </div>
+</section>
+<p class="scroll-hint">Scroll <span>&darr;</span></p>
+
+<!-- Intro -->
+<section class="section">
+  <div class="container container--narrow">
+    <div class="section-head fade-up">
+      <p class="label">Festive Group Dining at State Buildings</p>
+      <h2>Gather your table, wherever the mood takes you</h2>
+      <p>At the heart of the State Buildings, festive gatherings take shape over generous feasts at Long Chim, Petition, Post and Wildflower, with menus made for sharing, celebrating and bringing people together. Please note, menus are subject to change.</p>
+    </div>
+    <div class="chips fade-up" style="justify-content:center">
+      <a class="chip" href="#long-chim">Long Chim</a>
+      <a class="chip" href="#petition">Petition</a>
+      <a class="chip" href="#post">Post</a>
+      <a class="chip" href="#wildflower">Wildflower</a>
+    </div>
+  </div>
+</section>
+
+<!-- Venues -->
+<div id="venues">
+
+<section class="venue" id="long-chim">
+  <div class="container">
+    <div class="venue__split">
+      <div class="fade-up">
+        <span class="venue__tag">Basement Level &middot; Groups of 10 or more</span>
+        <h2>Long Chim</h2>
+        <p>In the basement of State Buildings, Long Chim brings the festive season to life with the Maa Long Chim. This shared-style menu is available for lunch or dinner, with two menu options offered at lunch and one for dinner.</p>
+        <p class="venue__note">Menu subject to change.</p>
+        <div class="venue__meta">
+          <strong>Days &amp; hours</strong><br>
+          Tuesday to Saturday: 12PM&ndash;Late. Sunday &amp; Monday: Closed<br>
+          <strong>Contact</strong> +61 8 6168 7888 &middot; enquiries@statebuildings.com
+        </div>
+        <a class="btn" href="https://www.sevenrooms.com/experiences/longchim/festive-group-dining-at-long-chim-4787810814836736" target="_blank" rel="noopener">Book now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="venue__media fade-up"><img src="images/long-chim-festive.jpg" alt="A guest at Long Chim sharing a Thai dish at a festive group dinner" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<section class="venue" id="petition">
+  <div class="container">
+    <div class="venue__split">
+      <div class="fade-up">
+        <span class="venue__tag">Ground Floor &middot; Groups of 10 or more</span>
+        <h2>Petition</h2>
+        <p>At the heart of Petition Kitchen, the festive season is celebrated over a Chef's Selection menu, drawing on the best local produce of the season.</p>
+        <p class="venue__note">Menu subject to change.</p>
+        <div class="venue__meta">
+          <strong>Days &amp; hours</strong><br>
+          Open daily: 12PM&ndash;10PM<br>
+          <strong>Contact</strong> +61 8 6168 7888 &middot; enquiries@statebuildings.com
+        </div>
+        <a class="btn" href="https://www.sevenrooms.com/experiences/petition/festive-group-dining-at-petition-6080529650597888" target="_blank" rel="noopener">Book now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="venue__media fade-up"><img src="images/petition-festive.jpg" alt="A shared table of dishes at Petition Kitchen, State Buildings, set for a festive group lunch" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<section class="venue" id="post">
+  <div class="container">
+    <div class="venue__split">
+      <div class="fade-up">
+        <span class="venue__tag">Ground Floor, Postal Hall</span>
+        <h2>Post</h2>
+        <p>At Post, the festive season comes to the table with a choice of dining experiences for lunch or dinner. Settle into the bustling Main Dining Room for a four-course Festive Degustation, or choose from two menus in Post's private dining rooms: a three-course menu, or the Italian Table, a four-course experience featuring antipasto, shared entr&eacute;e, pasta and 700g rib eye. Sparkling wine and oysters are also available to elevate the occasion.</p>
+        <p class="venue__note">Menu subject to change.</p>
+        <div class="venue__meta">
+          <strong>Days &amp; hours</strong><br>
+          Open daily. Breakfast 6:30AM&ndash;11:00AM &middot; Lunch 12:00PM&ndash;2:30PM &middot; Dinner 5:30PM&ndash;9:30PM<br>
+          <strong>Contact</strong> +61 8 6168 7888 &middot; enquiries@statebuildings.com
+        </div>
+        <a class="btn" href="https://statebuildings.com/contact?utm_source=lp&amp;utm_medium=referral&amp;utm_campaign=festive-group-dining">Enquire now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="venue__media fade-up"><img src="images/post-festive.jpg" alt="An Italian-style spread of antipasto and oysters at Post, State Buildings, for festive group dining" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<section class="venue" id="wildflower">
+  <div class="container">
+    <div class="venue__split">
+      <div class="fade-up">
+        <span class="venue__tag">Level 4, COMO The Treasury</span>
+        <h2>Wildflower</h2>
+        <p>Set high above the city, Wildflower's festive group dining menus are ideal for corporate groups and end-of-year celebrations. Lunch is served across three, six or eight courses, or an &agrave; la carte offering for parties up to eight guests, while dinner unfolds across four, six or eight courses. The Wildflower Private Dining Room is available upon request for nine guests or more.</p>
+        <p class="venue__note">Menu subject to change.</p>
+        <div class="venue__meta">
+          <strong>Days &amp; hours</strong><br>
+          Lunch: Wednesday to Friday, 12PM&ndash;2:30PM &middot; Dinner: Tuesday to Saturday, 5:30PM&ndash;Late<br>
+          <strong>Contact</strong> +61 8 6168 7888 &middot; enquiries@statebuildings.com
+        </div>
+        <a class="btn" href="https://statebuildings.com/contact?utm_source=lp&amp;utm_medium=referral&amp;utm_campaign=festive-group-dining">Enquire now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="venue__media fade-up"><img src="images/wildflower-festive.jpg" alt="Guests dining at Wildflower, State Buildings, with city views for a festive group celebration" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<!-- How it works -->
+<section class="section section--sand">
+  <div class="container">
+    <div class="section-head fade-up">
+      <p class="label">How it works</p>
+      <h2>Three steps to your festive table</h2>
+    </div>
+    <div class="steps stagger">
+      <div class="step fade-up" style="--i:0"><span class="step__n">01</span><h3>Choose your venue</h3><p>Long Chim, Petition, Post or Wildflower, each with its own festive menu and setting.</p></div>
+      <div class="step fade-up" style="--i:1"><span class="step__n">02</span><h3>Book or enquire</h3><p>Book Long Chim and Petition directly online. For Post and Wildflower, send an enquiry and our team will confirm availability.</p></div>
+      <div class="step fade-up" style="--i:2"><span class="step__n">03</span><h3>We confirm the details</h3><p>Menu, timing and group size are confirmed ahead of your date. Menus are subject to change.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Closing enquire -->
+<section class="section enquire">
+  <div class="container container--narrow">
+    <p class="label">Not sure which venue suits your group?</p>
+    <h2>Talk to our events team</h2>
+    <p>Share your group size and preferred date, and we will help you find the right table for the occasion.</p>
+    <div class="enquire__contact">
+      <a href="tel:+61861687888">+61 8 6168 7888</a><br>
+      <a href="mailto:enquiries@statebuildings.com">enquiries@statebuildings.com</a>
+    </div>
+    <a class="btn btn--light" href="https://statebuildings.com/contact?utm_source=lp&amp;utm_medium=referral&amp;utm_campaign=festive-group-dining">Enquire now</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <a class="footer__logo" href="https://statebuildings.com/" aria-label="State Buildings"><svg viewBox="0 0 171 51" fill="currentColor" aria-hidden="true"><use href="#sb-logo"/></svg></a>
+      <p>State Buildings, Cnr St Georges Tce and Barrack St, Perth WA 6000<br>+61 8 6168 7888 &middot; <a href="mailto:enquiries@statebuildings.com">enquiries@statebuildings.com</a><br><a href="https://statebuildings.com/events-weddings">Events and weddings</a> &middot; <a href="https://statebuildings.com/privacy-policy">Privacy Policy</a> &middot; <a href="https://statebuildings.com/terms-conditions">Terms and Conditions</a></p>
+    </div>
+    <p>The State Buildings acknowledge the traditional owners of this land on which we meet. We honour and respect the Whadjuk Noongar People and their continuing connection to this Country. We welcome all, and pay our deepest respects to Elders past and present, today and always.</p>
+    <small>Hotel License, License No: 6010149386. Licensee: Treasury WA Pty Ltd, 28 Barrack St (cnr St Georges Tce) Perth WA 6000. Telephone +61 8 6168 7888. Warning: Under the Liquor Control Act 1988, it is an offence to sell or supply liquor to a person under the age of 18 years on licensed or regulated premises; or for a person under the age of 18 years to purchase, or attempt to purchase liquor on licensed or regulated premises.<br>&copy; 2026 State Buildings. All rights reserved.</small>
+  </div>
+</footer>
+
+<!-- Logo symbol (State Buildings wordmark from statebuildings.com header) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="sb-logo" viewBox="0 0 171 51"><g><path d="M140.488 27H155.36C157.711 27 159.654 27.7273 161.146 29.1364C162.638 30.5909 163.361 32.6364 163.361 35.2727C163.361 37.9091 163.18 37.2727 162.773 38.2273C162.366 39.1818 161.824 40 161.146 40.6818C160.468 41.3636 159.654 41.9091 158.75 42.3182C157.801 42.7273 156.807 42.9091 155.722 42.9091H140.488V26.9545V27ZM140.488 8.04545H155.044C157.168 8.04545 158.795 8.59091 159.88 9.68182C160.965 10.7727 161.508 12.1818 161.508 13.9091C161.508 15.6364 160.92 17.2273 159.745 18.4091C158.569 19.5455 156.987 20.1364 154.998 20.1364H140.534V8.09091H140.488V8.04545ZM132.849 49.8182H154.953C157.259 49.8182 159.428 49.4545 161.372 48.7727C163.316 48.0909 164.988 47.0909 166.435 45.7727C167.881 44.4545 168.966 42.9091 169.78 41.1364C170.593 39.3182 171 37.3182 171 35.0909C171 32.8636 170.819 32.2273 170.412 30.9091C170.006 29.5909 169.463 28.4091 168.785 27.3182C168.107 26.2273 167.293 25.3182 166.389 24.5C165.485 23.7273 164.491 23.1364 163.496 22.7273C164.22 22.2727 164.898 21.7273 165.621 21.0909C166.299 20.4545 166.932 19.7273 167.474 18.9545C168.017 18.1364 168.423 17.2727 168.74 16.2727C169.056 15.3182 169.192 14.3182 169.192 13.2727C169.192 9.40909 167.926 6.40909 165.44 4.31818C162.954 2.22727 159.293 1.13636 154.501 1.13636H132.849V49.8182Z"></path><path d="M27.2569 50.1364C29.5171 49.5455 31.506 48.6364 33.2688 47.4545C35.0317 46.2273 36.3878 44.6818 37.4726 42.7273C38.5123 40.7727 39.0547 38.5 39.0547 35.7727C39.0547 33.0455 38.6027 31.4545 37.7439 29.8636C36.885 28.2727 35.755 26.9545 34.4441 25.9545C33.088 24.9545 31.6416 24.1364 30.0143 23.5455C28.387 22.9545 26.8501 22.4545 25.4037 22.0455L17.9453 20.1364C14.9619 19.2727 12.8826 18.2273 11.7978 16.9545C10.6677 15.6818 10.1253 14.3636 10.1253 13.0909C10.1253 11.8182 10.3965 11.2273 10.8937 10.4091C11.391 9.63636 12.1142 8.95455 12.973 8.40909C13.8319 7.86364 14.8715 7.45455 16.0468 7.18182C17.222 6.90909 18.5329 6.72727 19.889 6.72727C22.6011 6.72727 24.9064 7.36364 26.7597 8.68182C28.613 10 29.9691 12.3636 30.8731 15.7727L37.9247 12.5455C37.2918 10.3636 36.3878 8.45455 35.2125 6.86364C34.0373 5.27273 32.636 3.95455 31.0087 2.95455C29.3815 1.95455 27.6638 1.18182 25.7653 0.727273C23.8668 0.272727 21.9231 0 19.889 0C17.8549 0 15.414 0.272727 13.2895 0.772727C11.165 1.27273 9.31166 2.09091 7.63918 3.18182C6.0119 4.27273 4.70103 5.68182 3.70658 7.40909C2.71213 9.13636 2.21491 11.1818 2.21491 13.5909C2.21491 16 2.62173 17.3636 3.39017 18.8182C4.15861 20.2727 5.19826 21.5455 6.46392 22.5455C7.72958 23.5909 9.17605 24.4545 10.8033 25.0909C12.4306 25.7727 14.0579 26.3182 15.6852 26.7273L22.9175 28.5455C24.138 28.9091 25.2228 29.3182 26.2173 29.7727C27.2117 30.2273 28.1158 30.7727 28.8842 31.4091C29.6527 32.0455 30.2403 32.7727 30.6471 33.5909C31.0539 34.4091 31.2799 35.4091 31.2799 36.5455C31.2799 37.6818 30.9635 39.2727 30.3307 40.2727C29.6979 41.2727 28.8842 42.0455 27.8446 42.6818C26.8049 43.2727 25.6749 43.7273 24.4092 43.9545C23.1435 44.1818 21.8327 44.3182 20.4766 44.3182C16.8152 44.3182 13.8771 43.3636 11.617 41.5C9.40206 39.6364 7.91039 36.9545 7.18715 33.4545L0 37.1818C0.768438 39.6818 1.80809 41.8182 3.16416 43.5909C4.52022 45.3636 6.0571 46.7727 7.81999 47.8636C9.58287 48.9545 11.5266 49.7727 13.6059 50.2727C15.6852 50.7727 17.9001 51 20.2506 51C22.6011 51 24.9968 50.7273 27.2569 50.1364Z"></path></g></symbol></svg>
+
+<script>
+(function(){
+  // Deadline bar: Festive Group Dining season runs through 30 December 2026, 22:30 AWST (UTC+8)
+  var deadline=new Date('2026-12-30T22:30:00+08:00'), now=new Date();
+  var topbar=document.getElementById('topbar'), days=document.getElementById('topbar-days');
+  if(now<deadline){
+    var d=Math.ceil((deadline-now)/86400000);
+    days.textContent=d<=1?'Last day of the season.':d+' days left in the season.';
+    topbar.classList.add('is-on'); document.body.classList.add('has-topbar');
+  }
+
+  // Nav
+  var nav=document.getElementById('nav');
+  function onScroll(){nav.classList.toggle('scrolled',window.scrollY>40);}
+  onScroll(); window.addEventListener('scroll',onScroll,{passive:true});
+
+  // Reveal
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}});},{threshold:.12});
+  document.querySelectorAll('.fade-up').forEach(function(el){io.observe(el);});
+})();
+</script>
+</body>
+</html>
