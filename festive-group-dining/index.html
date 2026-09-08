@@ -16,6 +16,9 @@
 <!-- End Google Tag Manager -->
 
 <style>
+/* ---------- Heading scale (match site: no negative tracking, tight leading) ---------- */
+h2{line-height:1.05;letter-spacing:0}
+
 /* ---------- Deadline bar ---------- */
 .topbar{position:fixed;top:0;left:0;right:0;z-index:101;background:var(--wine);color:var(--white);font-family:var(--font-grotesk);font-size:.8rem;letter-spacing:.04em;text-align:center;padding:.55rem var(--pad);display:none}
 .topbar.is-on{display:block}
@@ -39,7 +42,7 @@ body.has-topbar .nav{top:34px}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.45) 0%,rgba(0,0,0,.25) 35%,rgba(0,0,0,.82) 100%)}
 .hero__inner{position:relative;z-index:1;padding:8rem var(--pad) 4rem;width:100%;max-width:var(--container);margin:0 auto}
 .hero .label{color:rgba(255,255,255,.9)}
-.hero h1{color:var(--white);max-width:19ch;margin-bottom:1.25rem;font-size:clamp(2.1rem,4.6vw,3.9rem)}
+.hero h1{color:var(--white);max-width:19ch;margin-bottom:1.25rem;font-size:clamp(2.1rem,4.6vw,3.9rem);line-height:1;letter-spacing:0}
 .hero p{color:rgba(255,255,255,.94);max-width:560px;font-size:clamp(1.05rem,1.5vw,1.3rem)}
 .hero__cta{display:flex;flex-wrap:wrap;gap:1rem;align-items:center;margin-top:1.75rem}
 .hero__proof{display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;margin-top:2rem;padding-top:1.25rem;border-top:1px solid rgba(255,255,255,.3);font-family:var(--font-grotesk);font-size:.8rem;letter-spacing:.05em;color:rgba(255,255,255,.85)}
@@ -113,7 +116,7 @@ body.has-topbar .nav{top:34px}
   .scroll-hint{display:block;text-align:center;font-family:var(--font-grotesk);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;padding:1rem 0 0;color:var(--text-2)}
   .scroll-hint span{display:block;animation:bob 1.6s infinite}
   @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
-  h2{font-size:1.55rem}
+  h2{font-size:1.55rem;line-height:1.05;letter-spacing:0}
   .section,.venue{padding:3.5rem 0}
   .section-head{margin-bottom:2rem}
   .btn{font-size:.8rem;padding:.85rem 1.3rem}
@@ -143,8 +146,8 @@ body.has-topbar .nav{top:34px}
   <img class="hero__bg" src="images/hero-festive.jpg" alt="A shared table of dishes at Long Chim, State Buildings, set for a group of friends" fetchpriority="high">
   <div class="hero__inner">
     <p class="label">Festive Group Dining. 2 November &ndash; 30 December</p>
-    <h1>The festive season, shared across four tables at State Buildings.</h1>
-    <p>Book your end-of-year celebration at Long Chim, Petition, Post or Wildflower. Menus built for sharing, groups of 10 or more, right through the season.</p>
+    <h1>Festive Group Dining at State Buildings</h1>
+    <p>The festive season, shared across four tables. Book your end-of-year celebration at Long Chim, Petition, Post or Wildflower, with menus made for sharing and groups of 10 or more.</p>
     <div class="hero__cta">
       <a class="btn btn--light" href="#venues">See the venues <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       <a class="btn btn--outline" style="color:#fff;border-color:rgba(255,255,255,.6)" href="https://statebuildings.com/contact?utm_source=lp&amp;utm_medium=referral&amp;utm_campaign=festive-group-dining">Enquire now</a>
@@ -163,7 +166,7 @@ body.has-topbar .nav{top:34px}
   <div class="container container--narrow">
     <div class="section-head fade-up">
       <p class="label">Festive Group Dining at State Buildings</p>
-      <h2>Gather your table, wherever the mood takes you</h2>
+      <h2>Four Restaurants, One Festive Season</h2>
       <p>At the heart of the State Buildings, festive gatherings take shape over generous feasts at Long Chim, Petition, Post and Wildflower, with menus made for sharing, celebrating and bringing people together. Please note, menus are subject to change.</p>
     </div>
     <div class="chips fade-up" style="justify-content:center">
@@ -183,7 +186,7 @@ body.has-topbar .nav{top:34px}
     <div class="venue__split">
       <div class="fade-up">
         <span class="venue__tag">Basement Level &middot; Groups of 10 or more</span>
-        <h2>Long Chim</h2>
+        <h2>Festive Group Dining at Long Chim</h2>
         <p>In the basement of State Buildings, Long Chim brings the festive season to life with the Maa Long Chim. This shared-style menu is available for lunch or dinner, with two menu options offered at lunch and one for dinner.</p>
         <p class="venue__note">Menu subject to change.</p>
         <div class="venue__meta">
@@ -203,7 +206,7 @@ body.has-topbar .nav{top:34px}
     <div class="venue__split">
       <div class="fade-up">
         <span class="venue__tag">Ground Floor &middot; Groups of 10 or more</span>
-        <h2>Petition</h2>
+        <h2>Festive Group Dining at Petition</h2>
         <p>At the heart of Petition Kitchen, the festive season is celebrated over a Chef's Selection menu, drawing on the best local produce of the season.</p>
         <p class="venue__note">Menu subject to change.</p>
         <div class="venue__meta">
@@ -223,7 +226,7 @@ body.has-topbar .nav{top:34px}
     <div class="venue__split">
       <div class="fade-up">
         <span class="venue__tag">Ground Floor, Postal Hall</span>
-        <h2>Post</h2>
+        <h2>Festive Group Dining at Post</h2>
         <p>At Post, the festive season comes to the table with a choice of dining experiences for lunch or dinner. Settle into the bustling Main Dining Room for a four-course Festive Degustation, or choose from two menus in Post's private dining rooms: a three-course menu, or the Italian Table, a four-course experience featuring antipasto, shared entr&eacute;e, pasta and 700g rib eye. Sparkling wine and oysters are also available to elevate the occasion.</p>
         <p class="venue__note">Menu subject to change.</p>
         <div class="venue__meta">
@@ -243,7 +246,7 @@ body.has-topbar .nav{top:34px}
     <div class="venue__split">
       <div class="fade-up">
         <span class="venue__tag">Level 4, COMO The Treasury</span>
-        <h2>Wildflower</h2>
+        <h2>Festive Group Dining at Wildflower</h2>
         <p>Set high above the city, Wildflower's festive group dining menus are ideal for corporate groups and end-of-year celebrations. Lunch is served across three, six or eight courses, or an &agrave; la carte offering for parties up to eight guests, while dinner unfolds across four, six or eight courses. The Wildflower Private Dining Room is available upon request for nine guests or more.</p>
         <p class="venue__note">Menu subject to change.</p>
         <div class="venue__meta">
@@ -265,12 +268,12 @@ body.has-topbar .nav{top:34px}
   <div class="container">
     <div class="section-head fade-up">
       <p class="label">How it works</p>
-      <h2>Three steps to your festive table</h2>
+      <h2>Your Festive Dining Journey</h2>
     </div>
     <div class="steps stagger">
-      <div class="step fade-up" style="--i:0"><span class="step__n">01</span><h3>Choose your venue</h3><p>Long Chim, Petition, Post or Wildflower, each with its own festive menu and setting.</p></div>
-      <div class="step fade-up" style="--i:1"><span class="step__n">02</span><h3>Book or enquire</h3><p>Book Long Chim and Petition directly online. For Post and Wildflower, send an enquiry and our team will confirm availability.</p></div>
-      <div class="step fade-up" style="--i:2"><span class="step__n">03</span><h3>We confirm the details</h3><p>Menu, timing and group size are confirmed ahead of your date. Menus are subject to change.</p></div>
+      <div class="step fade-up" style="--i:0"><span class="step__n">01</span><h3>Choose Your Venue</h3><p>Long Chim, Petition, Post or Wildflower, each with its own festive menu and setting.</p></div>
+      <div class="step fade-up" style="--i:1"><span class="step__n">02</span><h3>Book or Enquire</h3><p>Book Long Chim and Petition directly online. For Post and Wildflower, send an enquiry and our team will confirm availability.</p></div>
+      <div class="step fade-up" style="--i:2"><span class="step__n">03</span><h3>We Confirm the Details</h3><p>Menu, timing and group size are confirmed ahead of your date. Menus are subject to change.</p></div>
     </div>
   </div>
 </section>
@@ -278,8 +281,8 @@ body.has-topbar .nav{top:34px}
 <!-- Closing enquire -->
 <section class="section enquire">
   <div class="container container--narrow">
-    <p class="label">Not sure which venue suits your group?</p>
-    <h2>Talk to our events team</h2>
+    <p class="label">Talk to Our Events Team</p>
+    <h2>Enquire Now</h2>
     <p>Share your group size and preferred date, and we will help you find the right table for the occasion.</p>
     <div class="enquire__contact">
       <a href="tel:+61861687888">+61 8 6168 7888</a><br>
