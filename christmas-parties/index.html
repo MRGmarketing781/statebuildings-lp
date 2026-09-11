@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Christmas Parties and Corporate Functions | State Buildings, Perth</title>
+<meta name="description" content="Celebrate the end of the year at State Buildings, Perth. Eight distinct spaces across the heritage precinct, from intimate wine rooms to exclusive-use venues, with seamless service tailored to your event.">
+<link rel="icon" href="images/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="preload" as="image" href="images/hero-christmas.jpg">
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/style.css">
+
+<!-- Google Tag Manager (same container as statebuildings.com) -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5KL7FBX');</script>
+<!-- End Google Tag Manager -->
+
+<style>
+/* ---------- Brand background: cream, matching festive-group-dining ---------- */
+:root{--cream:#f0eede}
+body{background:var(--cream)}
+.section--sand{background:var(--cream);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+
+/* ---------- Heading scale (match site: no negative tracking, tight leading) ---------- */
+h2{line-height:1.05;letter-spacing:0}
+
+/* ---------- Buttons: match statebuildings.com exactly ---------- */
+.btn{min-height:2rem;padding:.5rem .75rem;font-size:.75rem;line-height:1rem;letter-spacing:.5px;gap:.5rem}
+.btn svg{width:14px;height:14px}
+
+/* ---------- Nav ---------- */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:.85rem var(--pad);color:var(--white);transition:background .3s,color .3s,box-shadow .3s}
+.nav.scrolled{background:var(--white);color:var(--black);box-shadow:0 1px 0 var(--rule)}
+.nav__logo{display:block;width:66px;color:inherit}
+.nav__logo svg{width:100%;height:auto;display:block}
+.nav .btn{padding:.5rem .75rem;font-size:.75rem}
+.nav:not(.scrolled) .btn{background:transparent;border-color:var(--white);color:var(--white)}
+.nav:not(.scrolled) .btn:hover{background:var(--white);color:var(--black)}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;color:var(--white);overflow:hidden;background:var(--black)}
+.hero__bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 70%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.45) 0%,rgba(0,0,0,.25) 35%,rgba(0,0,0,.82) 100%)}
+.hero__inner{position:relative;z-index:1;padding:8rem var(--pad) 4rem;width:100%;max-width:var(--container);margin:0 auto}
+.hero .label{color:rgba(255,255,255,.9)}
+.hero h1{color:var(--white);max-width:19ch;margin-bottom:1.25rem;font-size:clamp(2.1rem,4.6vw,3.9rem);line-height:1;letter-spacing:0}
+.hero p{color:rgba(255,255,255,.94);max-width:560px;font-size:clamp(1.05rem,1.5vw,1.3rem)}
+.hero__cta{display:flex;flex-wrap:wrap;gap:1rem;align-items:center;margin-top:1.75rem}
+.hero__proof{display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;margin-top:2rem;padding-top:1.25rem;border-top:1px solid rgba(255,255,255,.3);font-family:var(--font-serif);font-size:.95rem;letter-spacing:0;color:rgba(255,255,255,.85)}
+.hero__proof strong{color:var(--white);font-weight:500}
+.scroll-hint{display:none}
+
+/* ---------- Spaces grid ---------- */
+.spaces{display:grid;grid-template-columns:repeat(2,1fr);gap:2.5rem 2rem}
+.space{position:relative;display:flex;flex-direction:column;color:inherit;background:var(--white);border:1px solid var(--rule)}
+.space__media{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--black)}
+.space__slide{position:absolute;inset:0;opacity:0;transition:opacity 1s ease}
+.space__slide.is-active{opacity:1}
+.space__slide img{width:100%;height:100%;object-fit:cover}
+.space__dots{position:absolute;left:1rem;bottom:1rem;z-index:2;display:flex;gap:.4rem}
+.space__dots span{width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.45);transition:background .3s}
+.space__dots span.is-active{background:var(--white)}
+.space__cap{position:absolute;right:1rem;top:1rem;z-index:2;font-family:var(--font-grotesk);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--white);background:rgba(0,0,0,.45);padding:.35rem .7rem;border-radius:999px;backdrop-filter:blur(2px)}
+.space__body{padding:1.5rem 1.5rem 1.6rem;flex:1;display:flex;flex-direction:column}
+.space__body p{flex:1}
+.space__tag{font-family:var(--font-grotesk);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--wine);display:block;margin-bottom:.5rem}
+.space__body h3{font-size:1.4rem;margin-bottom:.5rem;letter-spacing:0}
+.space__body p{font-size:.95rem;color:var(--text-2);margin:0 0 1rem;max-width:none;line-height:1.5}
+.space__link{display:inline-flex;align-items:center;gap:.4rem;font-family:var(--font-grotesk);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--black);text-decoration:none;border-bottom:1px solid var(--black);padding-bottom:.15rem}
+.space__link svg{width:12px;height:12px;transition:transform .2s}
+.space:hover .space__link svg{transform:translateX(3px)}
+
+/* ---------- Process ---------- */
+.steps{counter-reset:step;display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+.step{position:relative;padding-top:1.25rem;border-top:1px solid var(--black)}
+.step__n{font-family:var(--font-grotesk);font-size:.75rem;letter-spacing:.12em;margin-bottom:.75rem;display:block}
+.step h3{font-size:1.2rem;margin-bottom:.5rem}
+.step p{font-size:.95rem;color:var(--text-2);margin:0}
+
+/* ---------- FAQ ---------- */
+.faq{max-width:820px;margin:0 auto}
+.faq__item{border-bottom:1px solid var(--rule)}
+.faq__item:first-child{border-top:1px solid var(--rule)}
+.faq__q{width:100%;display:flex;align-items:center;justify-content:space-between;gap:1rem;background:none;border:0;text-align:left;padding:1.35rem 0;font-family:var(--font-serif);font-size:1.05rem;color:var(--black);cursor:pointer}
+.faq__icon{flex:none;width:20px;height:20px;position:relative}
+.faq__icon::before,.faq__icon::after{content:"";position:absolute;top:50%;left:50%;background:var(--black);transform:translate(-50%,-50%)}
+.faq__icon::before{width:14px;height:1.5px}
+.faq__icon::after{width:1.5px;height:14px;transition:transform .25s ease}
+.faq__item.is-open .faq__icon::after{transform:translate(-50%,-50%) rotate(90deg) scale(0)}
+.faq__a{max-height:0;overflow:hidden;transition:max-height .3s ease}
+.faq__a p{padding-bottom:1.35rem;margin:0;color:var(--text-2);max-width:none}
+
+/* ---------- Closing enquire ---------- */
+.enquire{background:var(--black);color:var(--white);text-align:center}
+.enquire h2{color:var(--white)}
+.enquire p{color:rgba(255,255,255,.85);max-width:560px;margin-left:auto;margin-right:auto}
+.enquire__contact{font-family:var(--font-serif);font-size:1.05rem;line-height:1.9;margin-top:1.75rem}
+.enquire__contact a{color:var(--white);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.4)}
+.enquire .btn{margin-top:1.75rem}
+
+/* ---------- Footer ---------- */
+.footer{background:var(--cream);padding:3rem 0 2rem;font-size:.85rem;color:var(--text-2)}
+.footer__top{display:flex;justify-content:space-between;align-items:flex-start;gap:2rem;flex-wrap:wrap;margin-bottom:2rem}
+.footer__logo{width:80px;color:var(--black)}
+.footer__logo svg{width:100%;height:auto}
+.footer p{max-width:none}
+.footer small{display:block;font-size:.72rem;line-height:1.6;margin-top:1.5rem;color:var(--text-2)}
+.footer a{color:var(--black)}
+
+/* ---------- Responsive ---------- */
+@media (max-width:1024px){
+  .steps{grid-template-columns:repeat(1,1fr);max-width:520px;margin:0 auto}
+}
+@media (max-width:900px){
+  .spaces{grid-template-columns:1fr;max-width:560px;margin:0 auto}
+  .hero__inner{padding-top:7rem}
+}
+@media (max-width:600px){
+  .nav{padding:.6rem 1rem}
+  .nav__logo{width:56px}
+  .nav .btn{padding:.55rem .85rem;font-size:.65rem}
+  .hero{min-height:100svh}
+  .hero__bg{object-position:48% 75%}
+  .hero__inner{padding:6rem 1.25rem 3rem}
+  .hero h1{font-size:2.1rem}
+  .hero p{font-size:.95rem}
+  .hero__cta .btn{width:100%}
+  .hero__proof{flex-direction:column;gap:.4rem;font-size:.72rem}
+  .scroll-hint{display:block;text-align:center;font-family:var(--font-grotesk);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;padding:1rem 0 0;color:var(--text-2)}
+  .scroll-hint span{display:block;animation:bob 1.6s infinite}
+  @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
+  h2{font-size:1.55rem;line-height:1.05;letter-spacing:0}
+  .section{padding:3.5rem 0}
+  .section-head{margin-bottom:2rem}
+  .btn{font-size:.75rem;padding:.5rem .75rem}
+  .spaces{gap:2rem}
+  .space__body{padding:1.15rem 1.15rem 1.25rem}
+  .space__body h3{font-size:1.15rem}
+  .space__body p{font-size:.85rem}
+  .space__cap{font-size:.62rem;padding:.3rem .6rem}
+  .faq__q{font-size:.95rem;padding:1.1rem 0}
+  .footer__top{flex-direction:column;align-items:center;text-align:center}
+  .footer{text-align:center}
+}
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5KL7FBX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<header class="nav" id="nav">
+  <a class="nav__logo" href="https://statebuildings.com/" aria-label="State Buildings home">
+    <svg viewBox="0 0 171 51" fill="currentColor" aria-hidden="true"><use href="#sb-logo"/></svg>
+  </a>
+  <a class="btn" href="#spaces">See the spaces</a>
+</header>
+
+<section class="hero">
+  <img class="hero__bg" src="images/hero-christmas.jpg" alt="Postal Hall at State Buildings, Perth, filled with guests at long tables for a seated dinner" fetchpriority="high">
+  <div class="hero__inner">
+    <p class="label">Christmas Parties and Corporate Functions</p>
+    <h1>Christmas Parties at State Buildings</h1>
+    <p>Celebrate the end of the year with your team in one of Perth's most distinctive heritage precincts. Eight considered spaces across State Buildings, from intimate wine rooms to exclusive-use venues, each with seamless service tailored to your celebration.</p>
+    <div class="hero__cta">
+      <a class="btn btn--light" href="#spaces">See the spaces <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn btn--outline" style="color:#fff;border-color:rgba(255,255,255,.6)" href="https://statebuildings.com/contact?utm_source=lp&amp;utm_medium=referral&amp;utm_campaign=christmas-parties">Enquire now</a>
+    </div>
+    <div class="hero__proof">
+      <span><strong>Eight</strong> Spaces, One Precinct</span>
+      <span>Cocktail, Seated and Exclusive-Use Events</span>
+      <span>St Georges Terrace and Barrack Street, Perth</span>
+    </div>
+  </div>
+</section>
+<p class="scroll-hint">Scroll <span>&darr;</span></p>
+
+<!-- Intro -->
+<section class="section">
+  <div class="container container--narrow">
+    <div class="section-head fade-up">
+      <p class="label">Corporate Functions at State Buildings</p>
+      <h2>One Precinct, Every Kind of Christmas Party</h2>
+      <p>From multi-day conferences to corporate galas, State Buildings offers seamless service in a unique Perth setting for your end-of-year celebration. Whether it is an intimate client dinner, a cocktail function for your whole team, or exclusive use of an entire venue, there is a space within the precinct to suit.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Spaces grid -->
+<section class="section section--sand" id="spaces">
+  <div class="container">
+    <div class="section-head fade-up">
+      <p class="label">The Spaces</p>
+      <h2>Find Your Christmas Party Space</h2>
+      <p>Eight distinct settings across the precinct. Share your guest numbers and style of celebration, and our events team will recommend the space best suited to the occasion.</p>
+    </div>
+    <div class="spaces stagger">
+
+      <div class="space fade-up" style="--i:0">
+        <div class="space__media" data-carousel>
+          <span class="space__cap">160 seated &middot; 300 cocktail</span>
+          <div class="space__slide is-active"><img src="images/postal-hall.jpg" alt="Aerial view of Postal Hall set with long tables for a large seated event" loading="lazy"></div>
+          <div class="space__slide"><img src="images/postal-hall-2.jpg" alt="Postal Hall filled with guests at a formal seated dinner" loading="lazy"></div>
+          <div class="space__slide"><img src="images/postal-hall-3.jpg" alt="Postal Hall's grand mezzanine level overlooking the main floor" loading="lazy"></div>
+          <div class="space__dots"><span class="is-active"></span><span></span><span></span></div>
+        </div>
+        <div class="space__body">
+          <span class="space__tag">Group and Exclusive Hire</span>
+          <h3>Postal Hall</h3>
+          <p>Group dining, private dining or exclusive hire in the grand heart of the precinct. Ideal for a large cocktail celebration or a seated Christmas dinner beneath the heritage arches.</p>
+          <a class="space__link" href="https://statebuildings.com/contact?utm_source=lp&amp;utm_medium=referral&amp;utm_campaign=christmas-parties">Enquire now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </div>
+
+      <div class="space fade-up" style="--i:1">
+        <div class="space__media" data-carousel>
+          <span class="space__cap">Up to 60 guests</span>
+          <div class="space__slide is-active"><img src="images/the-mark-2.jpg" alt="The Mark set with long tables and candlelight for a seated group dinner" loading="lazy"></div>
+          <div class="space__slide"><img src="images/the-mark.jpg" alt="The Mark, a light-filled event space at State Buildings, set for lunch" loading="lazy"></div>
+          <div class="space__slide"><img src="images/the-mark-3.jpg" alt="The Mark set up boardroom-style for a conference" loading="lazy"></div>
+          <div class="space__dots"><span class="is-active"></span><span></span><span></span></div>
+        </div>
+        <div class="space__body">
+          <span class="space__tag">Light-Filled and Flexible</span>
+          <h3>The Mark</h3>
+          <p>A refined, light-filled space designed for meaningful gatherings, where atmosphere, detail and setting come together for cocktail functions, seated dinners and conferences alike.</p>
+          <a class="space__link" href="https://statebuildings.com/contact?utm_source=lp&amp;utm_medium=referral&amp;utm_campaign=christmas-parties">Enquire now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </div>
+
+      <div class="space fade-up" style="--i:2">
+        <div class="space__media" data-carousel>
+          <span class="space__cap">Capacity on enquiry</span>
+          <div class="space__slide is-active"><img src="images/beer-corner.jpg" alt="A group gathered around a table at Beer Corner beneath its tall heritage windows" loading="lazy"></div>
+          <div class="space__slide"><img src="images/beer-corner-2.jpg" alt="Guests at Beer Corner's long communal table" loading="lazy"></div>
+          <div class="space__slide"><img src="images/beer-corner-3.jpg" alt="Friends sharing plates and drinks at Beer Corner" loading="lazy"></div>
+          <div class="space__dots"><span class="is-active"></span><span></span><span></span></div>
+        </div>
+        <div class="space__body">
+          <span class="space__tag">Lively and Intimate</span>
+          <h3>Beer Corner</h3>
+          <p>A lively, intimate space for corporate functions and private events, surrounded by layers of history and driven by great beer.</p>
+          <a class="space__link" href="https://statebuildings.com/contact?utm_source=lp&amp;utm_medium=referral&amp;utm_campaign=christmas-parties">Enquire now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </div>
+
+      <div class="space fade-up" style="--i:3">
+        <div class="space__media" data-carousel>
+          <span class="space__cap">Up to 60 guests</span>
+          <div class="space__slide is-active"><img src="images/pooles-temple-3.jpg" alt="Pooles Temple underground space filled with guests beneath globe pendant lights" loading="lazy"></div>
+          <div class="space__slide"><img src="images/pooles-temple-2.jpg" alt="The back bar at Pooles Temple" loading="lazy"></div>
+          <div class="space__dots"><span class="is-active"></span><span></span></div>
+        </div>
+        <div class="space__body">
+          <span class="space__tag">Underground and Intimate</span>
+          <h3>Pooles Temple</h3>
+          <p>All good things begin underground. A stylish, relaxed setting suited to cocktail-style events, corporate functions and product launches.</p>
+          <a class="space__link" href="https://statebuildings.com/contact?utm_source=lp&amp;utm_medium=referral&amp;utm_campaign=christmas-parties">Enquire now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </div>
+
+      <div class="space fade-up" style="--i:4">
+        <div class="space__media" data-carousel>
+          <span class="space__cap">Capacity on enquiry</span>
+          <div class="space__slide is-active"><img src="images/wine-merchant-2.jpg" alt="Guests seated at the bar and tables inside Wine Merchant" loading="lazy"></div>
+          <div class="space__slide"><img src="images/wine-merchant-1.jpg" alt="Wine Merchant's dark-panelled interior with guests at the bar" loading="lazy"></div>
+          <div class="space__slide"><img src="images/wine-merchant-3.jpg" alt="A guest reading the wine list at a table in Wine Merchant" loading="lazy"></div>
+          <div class="space__dots"><span class="is-active"></span><span></span><span></span></div>
+        </div>
+        <div class="space__body">
+          <span class="space__tag">Refined and Relaxed</span>
+          <h3>Wine Merchant</h3>
+          <p>Tucked away from the city's bustle, a refined setting that feels considered yet relaxed, well suited to a more intimate end-of-year celebration.</p>
+          <a class="space__link" href="https://statebuildings.com/contact?utm_source=lp&amp;utm_medium=referral&amp;utm_campaign=christmas-parties">Enquire now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </div>
+
+      <div class="space fade-up" style="--i:5">
+        <div class="space__media" data-carousel>
+          <span class="space__cap">Capacity on enquiry</span>
+          <div class="space__slide is-active"><img src="images/long-chim-courtyard.jpg" alt="Long Chim's high-walled courtyard from above, with colourful umbrellas over the tables" loading="lazy"></div>
+          <div class="space__slide"><img src="images/long-chim-courtyard-3.jpg" alt="Guests at a table under the umbrellas in Long Chim's courtyard" loading="lazy"></div>
+          <div class="space__dots"><span class="is-active"></span><span></span></div>
+        </div>
+        <div class="space__body">
+          <span class="space__tag">Restaurant and Courtyard</span>
+          <h3>Long Chim</h3>
+          <p>Authentic Thai flavours with exclusive use of Long Chim's barrel-vaulted basement and high-walled courtyard, made for celebrating as a group.</p>
+          <a class="space__link" href="https://statebuildings.com/contact?utm_source=lp&amp;utm_medium=referral&amp;utm_campaign=christmas-parties">Enquire now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </div>
+
+      <div class="space fade-up" style="--i:6">
+        <div class="space__media" data-carousel>
+          <span class="space__cap">Up to 20 seated</span>
+          <div class="space__slide is-active"><img src="images/state-cellars-2.jpg" alt="The long table in the vaulted State Cellars Wine Room, set for a private dinner" loading="lazy"></div>
+          <div class="space__slide"><img src="images/state-cellars-3.jpg" alt="State Cellars Wine Room table setting with curtained windows" loading="lazy"></div>
+          <div class="space__slide"><img src="images/state-cellars.jpg" alt="Guests being served at a private dinner in the State Cellars Wine Room" loading="lazy"></div>
+          <div class="space__dots"><span class="is-active"></span><span></span><span></span></div>
+        </div>
+        <div class="space__body">
+          <span class="space__tag">Client Entertaining</span>
+          <h3>State Cellars Wine Room</h3>
+          <p>An intimate, wine-led private dining space for client entertaining and celebratory dinners, complemented by thoughtful menus, curated wines and discreet, professional service.</p>
+          <a class="space__link" href="https://statebuildings.com/contact?utm_source=lp&amp;utm_medium=referral&amp;utm_campaign=christmas-parties">Enquire now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </div>
+
+      <div class="space fade-up" style="--i:7">
+        <div class="space__media" data-carousel>
+          <span class="space__cap">Capacity on enquiry</span>
+          <div class="space__slide is-active"><img src="images/cape-arid.jpg" alt="Guests at a private lunch in the Cape Arid Rooms" loading="lazy"></div>
+          <div class="space__slide"><img src="images/cape-arid-3.jpg" alt="Fresh flowers by the window in the Cape Arid Rooms" loading="lazy"></div>
+          <div class="space__slide"><img src="images/cape-arid-2.jpg" alt="A table set by the window in the Cape Arid Rooms" loading="lazy"></div>
+          <div class="space__dots"><span class="is-active"></span><span></span><span></span></div>
+        </div>
+        <div class="space__body">
+          <span class="space__tag">Private Dining</span>
+          <h3>Cape Arid Rooms</h3>
+          <p>Light-filled and flexible, three interconnected rooms perfect for private dining, celebrations and meaningful moments, brought to life with curated menus and seamless service.</p>
+          <a class="space__link" href="https://statebuildings.com/contact?utm_source=lp&amp;utm_medium=referral&amp;utm_campaign=christmas-parties">Enquire now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- How it works -->
+<section class="section">
+  <div class="container">
+    <div class="section-head fade-up">
+      <p class="label">How it works</p>
+      <h2>Planning Your Christmas Party</h2>
+    </div>
+    <div class="steps stagger">
+      <div class="step fade-up" style="--i:0"><span class="step__n">01</span><h3>Tell Us About Your Event</h3><p>Share your guest numbers, preferred date and the style of celebration you have in mind.</p></div>
+      <div class="step fade-up" style="--i:1"><span class="step__n">02</span><h3>We Recommend a Space</h3><p>Our events team matches your group to the right setting, from an intimate wine room to exclusive use of an entire venue.</p></div>
+      <div class="step fade-up" style="--i:2"><span class="step__n">03</span><h3>We Confirm the Details</h3><p>Menu, format and timings are confirmed with you ahead of your date, tailored to your celebration.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section section--sand">
+  <div class="container container--narrow">
+    <div class="section-head fade-up">
+      <p class="label">Christmas Parties FAQ</p>
+      <h2>Common Questions</h2>
+    </div>
+    <div class="faq fade-up">
+      <div class="faq__item is-open">
+        <button class="faq__q" aria-expanded="true">What size groups can you accommodate?<span class="faq__icon"></span></button>
+        <div class="faq__a"><p>State Buildings has eight distinct spaces across the precinct, from intimate private dining rooms seating up to 20 guests through to Postal Hall, which hosts up to 160 seated or 300 for a cocktail celebration. Share your guest numbers with our events team and they will recommend the space best suited to your event.</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" aria-expanded="false">Can we book a space for exclusive use?<span class="faq__icon"></span></button>
+        <div class="faq__a"><p>Yes. Several spaces, including Long Chim and Postal Hall, are available for exclusive hire so your celebration has the venue to itself. Availability depends on your date and guest numbers, so we recommend enquiring early for November and December.</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" aria-expanded="false">Do you have menu and pricing packages for Christmas parties?</button>
+        <div class="faq__a"><p>Menus are tailored to each event and space. Once our events team understands your guest numbers, format and preferred space, they will prepare a bespoke proposal including catering and beverage options.</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" aria-expanded="false">How far in advance should we book?</button>
+        <div class="faq__a"><p>Popular dates in November and December are secured well in advance. To have the widest choice of dates and spaces for your celebration, we recommend enquiring as early as possible.</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" aria-expanded="false">Where is State Buildings located?</button>
+        <div class="faq__a"><p>State Buildings sits on the corner of St Georges Terrace and Barrack Street in the heart of Perth, a central meeting point for teams and clients from across the city.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Closing enquire -->
+<section class="section enquire">
+  <div class="container container--narrow">
+    <p class="label">Talk to Our Events Team</p>
+    <h2>Enquire Now</h2>
+    <p>Share your guest numbers, preferred date and the style of celebration you have in mind, and our events team will help you find the right space for your Christmas party.</p>
+    <div class="enquire__contact">
+      <a href="tel:+61861687888">+61 8 6168 7888</a><br>
+      <a href="mailto:enquiries@statebuildings.com">enquiries@statebuildings.com</a>
+    </div>
+    <a class="btn btn--light" href="https://statebuildings.com/contact?utm_source=lp&amp;utm_medium=referral&amp;utm_campaign=christmas-parties">Enquire now</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <a class="footer__logo" href="https://statebuildings.com/" aria-label="State Buildings"><svg viewBox="0 0 171 51" fill="currentColor" aria-hidden="true"><use href="#sb-logo"/></svg></a>
+      <p>State Buildings, Cnr St Georges Tce and Barrack St, Perth WA 6000<br>+61 8 6168 7888 &middot; <a href="mailto:enquiries@statebuildings.com">enquiries@statebuildings.com</a><br><a href="https://statebuildings.com/events-weddings">Events and weddings</a> &middot; <a href="https://statebuildings.com/privacy-policy">Privacy Policy</a> &middot; <a href="https://statebuildings.com/terms-conditions">Terms and Conditions</a></p>
+    </div>
+    <p>The State Buildings acknowledge the traditional owners of this land on which we meet. We honour and respect the Whadjuk Noongar People and their continuing connection to this Country. We welcome all, and pay our deepest respects to Elders past and present, today and always.</p>
+    <small>Hotel License, License No: 6010149386. Licensee: Treasury WA Pty Ltd, 28 Barrack St (cnr St Georges Tce) Perth WA 6000. Telephone +61 8 6168 7888. Warning: Under the Liquor Control Act 1988, it is an offence to sell or supply liquor to a person under the age of 18 years on licensed or regulated premises; or for a person under the age of 18 years to purchase, or attempt to purchase liquor on licensed or regulated premises.<br>&copy; 2026 State Buildings. All rights reserved.</small>
+  </div>
+</footer>
+
+<!-- Logo symbol (State Buildings wordmark from statebuildings.com header) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="sb-logo" viewBox="0 0 171 51"><g><path d="M140.488 27H155.36C157.711 27 159.654 27.7273 161.146 29.1364C162.638 30.5909 163.361 32.6364 163.361 35.2727C163.361 37.9091 163.18 37.2727 162.773 38.2273C162.366 39.1818 161.824 40 161.146 40.6818C160.468 41.3636 159.654 41.9091 158.75 42.3182C157.801 42.7273 156.807 42.9091 155.722 42.9091H140.488V26.9545V27ZM140.488 8.04545H155.044C157.168 8.04545 158.795 8.59091 159.88 9.68182C160.965 10.7727 161.508 12.1818 161.508 13.9091C161.508 15.6364 160.92 17.2273 159.745 18.4091C158.569 19.5455 156.987 20.1364 154.998 20.1364H140.534V8.09091H140.488V8.04545ZM132.849 49.8182H154.953C157.259 49.8182 159.428 49.4545 161.372 48.7727C163.316 48.0909 164.988 47.0909 166.435 45.7727C167.881 44.4545 168.966 42.9091 169.78 41.1364C170.593 39.3182 171 37.3182 171 35.0909C171 32.8636 170.819 32.2273 170.412 30.9091C170.006 29.5909 169.463 28.4091 168.785 27.3182C168.107 26.2273 167.293 25.3182 166.389 24.5C165.485 23.7273 164.491 23.1364 163.496 22.7273C164.22 22.2727 164.898 21.7273 165.621 21.0909C166.299 20.4545 166.932 19.7273 167.474 18.9545C168.017 18.1364 168.423 17.2727 168.74 16.2727C169.056 15.3182 169.192 14.3182 169.192 13.2727C169.192 9.40909 167.926 6.40909 165.44 4.31818C162.954 2.22727 159.293 1.13636 154.501 1.13636H132.849V49.8182Z"></path><path d="M27.2569 50.1364C29.5171 49.5455 31.506 48.6364 33.2688 47.4545C35.0317 46.2273 36.3878 44.6818 37.4726 42.7273C38.5123 40.7727 39.0547 38.5 39.0547 35.7727C39.0547 33.0455 38.6027 31.4545 37.7439 29.8636C36.885 28.2727 35.755 26.9545 34.4441 25.9545C33.088 24.9545 31.6416 24.1364 30.0143 23.5455C28.387 22.9545 26.8501 22.4545 25.4037 22.0455L17.9453 20.1364C14.9619 19.2727 12.8826 18.2273 11.7978 16.9545C10.6677 15.6818 10.1253 14.3636 10.1253 13.0909C10.1253 11.8182 10.3965 11.2273 10.8937 10.4091C11.391 9.63636 12.1142 8.95455 12.973 8.40909C13.8319 7.86364 14.8715 7.45455 16.0468 7.18182C17.222 6.90909 18.5329 6.72727 19.889 6.72727C22.6011 6.72727 24.9064 7.36364 26.7597 8.68182C28.613 10 29.9691 12.3636 30.8731 15.7727L37.9247 12.5455C37.2918 10.3636 36.3878 8.45455 35.2125 6.86364C34.0373 5.27273 32.636 3.95455 31.0087 2.95455C29.3815 1.95455 27.6638 1.18182 25.7653 0.727273C23.8668 0.272727 21.9231 0 19.889 0C17.8549 0 15.414 0.272727 13.2895 0.772727C11.165 1.27273 9.31166 2.09091 7.63918 3.18182C6.0119 4.27273 4.70103 5.68182 3.70658 7.40909C2.71213 9.13636 2.21491 11.1818 2.21491 13.5909C2.21491 16 2.62173 17.3636 3.39017 18.8182C4.15861 20.2727 5.19826 21.5455 6.46392 22.5455C7.72958 23.5909 9.17605 24.4545 10.8033 25.0909C12.4306 25.7727 14.0579 26.3182 15.6852 26.7273L22.9175 28.5455C24.138 28.9091 25.2228 29.3182 26.2173 29.7727C27.2117 30.2273 28.1158 30.7727 28.8842 31.4091C29.6527 32.0455 30.2403 32.7727 30.6471 33.5909C31.0539 34.4091 31.2799 35.4091 31.2799 36.5455C31.2799 37.6818 30.9635 39.2727 30.3307 40.2727C29.6979 41.2727 28.8842 42.0455 27.8446 42.6818C26.8049 43.2727 25.6749 43.7273 24.4092 43.9545C23.1435 44.1818 21.8327 44.3182 20.4766 44.3182C16.8152 44.3182 13.8771 43.3636 11.617 41.5C9.40206 39.6364 7.91039 36.9545 7.18715 33.4545L0 37.1818C0.768438 39.6818 1.80809 41.8182 3.16416 43.5909C4.52022 45.3636 6.0571 46.7727 7.81999 47.8636C9.58287 48.9545 11.5266 49.7727 13.6059 50.2727C15.6852 50.7727 17.9001 51 20.2506 51C22.6011 51 24.9968 50.7273 27.2569 50.1364Z"></path></g></symbol></svg>
+
+<script>
+(function(){
+  // Nav
+  var nav=document.getElementById('nav');
+  function onScroll(){nav.classList.toggle('scrolled',window.scrollY>40);}
+  onScroll(); window.addEventListener('scroll',onScroll,{passive:true});
+
+  // Reveal
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}});},{threshold:.12});
+  document.querySelectorAll('.fade-up').forEach(function(el){io.observe(el);});
+
+  // Space card carousels: auto-rotate, pause off-screen
+  document.querySelectorAll('[data-carousel]').forEach(function(car){
+    var slides=car.querySelectorAll('.space__slide'), dots=car.querySelectorAll('.space__dots span');
+    if(slides.length<2) return;
+    var i=0, timer=null;
+    function show(n){
+      slides[i].classList.remove('is-active'); dots[i]&&dots[i].classList.remove('is-active');
+      i=(n+slides.length)%slides.length;
+      slides[i].classList.add('is-active'); dots[i]&&dots[i].classList.add('is-active');
+    }
+    function start(){ if(timer) return; timer=setInterval(function(){show(i+1);},4200+Math.random()*800); }
+    function stop(){ clearInterval(timer); timer=null; }
+    var vio=new IntersectionObserver(function(es){es.forEach(function(e){ e.isIntersecting?start():stop(); });},{threshold:.2});
+    vio.observe(car);
+  });
+
+  // FAQ accordion
+  document.querySelectorAll('.faq__item').forEach(function(item){
+    var q=item.querySelector('.faq__q'), a=item.querySelector('.faq__a');
+    if(item.classList.contains('is-open')){ a.style.maxHeight=a.scrollHeight+'px'; }
+    q.addEventListener('click',function(){
+      var isOpen=item.classList.contains('is-open');
+      document.querySelectorAll('.faq__item.is-open').forEach(function(other){
+        if(other!==item){ other.classList.remove('is-open'); other.querySelector('.faq__q').setAttribute('aria-expanded','false'); other.querySelector('.faq__a').style.maxHeight=null; }
+      });
+      if(isOpen){ item.classList.remove('is-open'); q.setAttribute('aria-expanded','false'); a.style.maxHeight=null; }
+      else { item.classList.add('is-open'); q.setAttribute('aria-expanded','true'); a.style.maxHeight=a.scrollHeight+'px'; }
+    });
+  });
+})();
+</script>
+</body>
+</html>
