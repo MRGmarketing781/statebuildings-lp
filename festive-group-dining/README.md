@@ -52,6 +52,57 @@ Both open in a new tab (`target="_blank" rel="noopener"`) rather than an iframe,
 5. Imagery is pulled from the client's own Sanity CDN (existing published photography). Swap
    in dedicated festive photography if/when Emmi supplies it.
 
+
+## Client feedback round 1 (Emmi, 2026-09-09) - APPLIED
+
+Emmi approved the page in principle ("lovely job") and asked for six changes "to align with
+our new brand guidelines". All six applied and redeployed 2026-09-09:
+
+| # | Request | What was done |
+|---|---|---|
+| 1 | "4 restaurants, one precinct" -> "one building", set in Times New Roman | Copy changed; `.hero__proof` switched from Dada Grotesk to `--font-serif` |
+| 2 | Months written in full | "2 Nov - 30 Dec" -> "2 November - 30 December". No other abbreviations existed |
+| 3 | Venue days & hours in Times New Roman | `.venue__meta` switched to `--font-serif` |
+| 4 | Background white -> cream `#F0EEDE` | Added `--cream`; applied to `body`, the previously-sand sections and the footer |
+| 5 | Footer phone/email in Times New Roman | `.enquire__contact` switched to `--font-serif` (the actual `<footer>` was already serif) |
+| 6 | Buttons to ~60% "to match SB button sizing" | Matched the real site spec, not a guess (see below) |
+
+**On the button sizing.** statebuildings.com renders its buttons with
+`font-button flex h-8 items-center justify-center gap-2 rounded-full bg-black px-3 py-2 text-xs tracking-[0.5px] text-white uppercase`.
+That is: 32px fixed height, 0.75rem/0.5rem padding, 0.75rem type, 0.5px tracking. Our button
+was ~52px tall, so the site's is 61% of it - which is exactly the "~60%" Emmi asked for. The
+`.btn` base rule lives in the SHARED `css/style.css` (used by winter-events-offer too), so the
+override is in this page's inline `<style>` block. Do not "fix" it in the shared file.
+
+**Judgement call worth flagging to Emmi.** The request was "background white to cream". The
+page also had lightly-tinted sand sections (`#f7f7ef`) alternating with white. Cream `#F0EEDE`
+is *darker* than that sand, so leaving sand as-is would have made those bands read as lighter
+patches on the cream. They were unified to the same cream and delineated with hairline rules
+instead. If the new brand guidelines include a second background tone, that is the value to
+drop into `--sand`.
+
+**Still with the client.** Their designer was shifting content the following day and sending it
+back; Emmi is also confirming all headings/copy and wants to discuss launching Google Ads at
+the same time. Expect a round 2 - do not treat the current copy as final.
+
+## Client feedback round 2 (Emmi, 2026-09-11) - APPLIED
+
+Emmi forwarded two small change requests, quoted alongside two lines she was just confirming
+were already correct (no action needed on those):
+
+| # | Request | What was done |
+|---|---|---|
+| 1 | "4 restaurants" -> "Four Restaurants, One Building" for consistency | `.hero__proof` changed from `<strong>4</strong> restaurants, one building` to `<strong>Four</strong> Restaurants, One Building`, matching the section heading "Four Restaurants, One Festive Season" |
+| 2 | Petition trading hours: main Petition page lists until 9pm | `.venue__meta` for Petition changed from `12PM–10PM` to `12PM–9PM` |
+
+The other two quoted lines (the hero intro sentence and the Wildflower PDR note) already
+matched the page verbatim - no change made, treated as confirmation not a request.
+
+**Note for next round hours audit.** Long Chim's listed hours (`Tue–Sat 12PM–Late`) were not
+raised by Emmi this time and were left as-is, but given Petition's hours had drifted from the
+live site, it may be worth asking her to confirm Long Chim and Post/Wildflower hours too next
+time she reviews, rather than waiting for her to catch each one individually.
+
 ## Deploy
 
 ```
