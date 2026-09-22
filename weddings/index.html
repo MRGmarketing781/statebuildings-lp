@@ -122,8 +122,6 @@ h2{line-height:1.05;letter-spacing:0}
 .enquire__submit{grid-column:1/-1;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;margin-top:.5rem}
 .enquire__status{font-size:.85rem;color:rgba(255,255,255,.75)}
 .enquire__status.is-error{color:#ff9d9d}
-.enquire__alt{text-align:center;margin-top:2.5rem;font-family:var(--font-serif);font-size:1rem;color:rgba(255,255,255,.85)}
-.enquire__alt a{color:var(--white);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.4)}
 
 /* ---------- Footer ---------- */
 .footer{background:var(--cream);padding:3rem 0 2rem;font-size:.85rem;color:var(--text-2)}
@@ -567,10 +565,6 @@ h2{line-height:1.05;letter-spacing:0}
         <span class="enquire__status" id="wedding-form-status" role="status" aria-live="polite"></span>
       </div>
     </form>
-
-    <div class="enquire__contact enquire__alt">
-      Prefer to call or email? <a href="tel:+61861687888">+61 8 6168 7888</a> &middot; <a href="mailto:enquiries@statebuildings.com">enquiries@statebuildings.com</a>
-    </div>
   </div>
 </section>
 
@@ -578,7 +572,7 @@ h2{line-height:1.05;letter-spacing:0}
   <div class="container">
     <div class="footer__top">
       <a class="footer__logo" href="https://statebuildings.com/" aria-label="State Buildings"><svg viewBox="0 0 171 51" fill="currentColor" aria-hidden="true"><use href="#sb-logo"/></svg></a>
-      <p>State Buildings, Cnr St Georges Tce and Barrack St, Perth WA 6000<br>+61 8 6168 7888 &middot; <a href="mailto:enquiries@statebuildings.com">enquiries@statebuildings.com</a><br><a href="https://statebuildings.com/events-weddings">Events and weddings</a> &middot; <a href="https://statebuildings.com/privacy-policy">Privacy Policy</a> &middot; <a href="https://statebuildings.com/terms-conditions">Terms and Conditions</a></p>
+      <p>State Buildings, Cnr St Georges Tce and Barrack St, Perth WA 6000<br><a href="https://statebuildings.com/events-weddings">Events and weddings</a> &middot; <a href="https://statebuildings.com/privacy-policy">Privacy Policy</a> &middot; <a href="https://statebuildings.com/terms-conditions">Terms and Conditions</a></p>
     </div>
     <p>The State Buildings acknowledge the traditional owners of this land on which we meet. We honour and respect the Whadjuk Noongar People and their continuing connection to this Country. We welcome all, and pay our deepest respects to Elders past and present, today and always.</p>
     <small>Hotel License, License No: 6010149386. Licensee: Treasury WA Pty Ltd, 28 Barrack St (cnr St Georges Tce) Perth WA 6000. Telephone +61 8 6168 7888. Warning: Under the Liquor Control Act 1988, it is an offence to sell or supply liquor to a person under the age of 18 years on licensed or regulated premises; or for a person under the age of 18 years to purchase, or attempt to purchase liquor on licensed or regulated premises.<br>&copy; 2026 State Buildings. All rights reserved.</small>
@@ -738,7 +732,7 @@ h2{line-height:1.05;letter-spacing:0}
         }
       }catch(err){
         statusEl.classList.add('is-error');
-        statusEl.textContent=(err && err.message) || 'Something went wrong. Please call +61 8 6168 7888 or email enquiries@statebuildings.com.';
+        statusEl.textContent=(err && err.message) || 'Something went wrong. Please try again in a moment.';
         submitBtn.disabled=false;
       }
     });

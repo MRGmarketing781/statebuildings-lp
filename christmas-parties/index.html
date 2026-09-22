@@ -66,7 +66,7 @@ h2{line-height:1.05;letter-spacing:0}
 .space__tag{font-family:var(--font-grotesk);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--wine);display:block;margin-bottom:.5rem}
 .space__body h3{font-size:1.4rem;margin-bottom:.5rem;letter-spacing:0}
 .space__body p{font-size:.95rem;color:var(--text-2);margin:0 0 1rem;max-width:none;line-height:1.5}
-.space__link{display:inline-flex;align-items:center;gap:.4rem;font-family:var(--font-grotesk);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--black);text-decoration:none;border-bottom:1px solid var(--black);padding-bottom:.15rem}
+.space__link{display:inline-flex;align-items:center;gap:.4rem;font-family:var(--font-grotesk);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--black);text-decoration:none;border-bottom:1px solid var(--black);padding-bottom:.15rem;background:none;border-top:0;border-left:0;border-right:0;cursor:pointer}
 .space__link svg{width:12px;height:12px;transition:transform .2s}
 .space:hover .space__link svg{transform:translateX(3px)}
 
@@ -90,13 +90,27 @@ h2{line-height:1.05;letter-spacing:0}
 .faq__a{max-height:0;overflow:hidden;transition:max-height .3s ease}
 .faq__a p{padding-bottom:1.35rem;margin:0;color:var(--text-2);max-width:none}
 
-/* ---------- Closing enquire ---------- */
-.enquire{background:var(--black);color:var(--white);text-align:center}
+/* ---------- Closing enquire (embedded form) ---------- */
+.enquire{background:var(--black);color:var(--white)}
 .enquire h2{color:var(--white)}
-.enquire p{color:rgba(255,255,255,.85);max-width:560px;margin-left:auto;margin-right:auto}
-.enquire__contact{font-family:var(--font-serif);font-size:1.05rem;line-height:1.9;margin-top:1.75rem}
-.enquire__contact a{color:var(--white);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.4)}
-.enquire .btn{margin-top:1.75rem}
+.enquire>.container>p.label,.enquire .section-head p{color:rgba(255,255,255,.85)}
+.enquire .section-head{text-align:center;max-width:640px;margin:0 auto 2.5rem}
+.enquire__form{max-width:720px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
+.enquire__form .field{display:flex;flex-direction:column;gap:.4rem}
+.enquire__form .field--full{grid-column:1/-1}
+.enquire__form label{font-family:var(--font-grotesk);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.75)}
+.enquire__form input,.enquire__form select,.enquire__form textarea{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.3);color:var(--white);padding:.75rem .9rem;font-family:var(--font-grotesk);font-size:.9rem;border-radius:2px}
+.enquire__form input::placeholder,.enquire__form textarea::placeholder{color:rgba(255,255,255,.4)}
+.enquire__form select{appearance:none;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2'><path d='M6 9l6 6 6-6'/></svg>");background-repeat:no-repeat;background-position:right .8rem center;background-size:16px}
+.enquire__form select option{color:var(--black)}
+.enquire__form textarea{resize:vertical;min-height:110px}
+.enquire__form .field-error{font-size:.78rem;color:#ff9d9d;min-height:1em}
+.enquire__checkbox{display:flex;align-items:flex-start;gap:.6rem;font-size:.85rem;color:rgba(255,255,255,.8)}
+.enquire__checkbox input{width:16px;height:16px;margin-top:.15rem;flex:none}
+.enquire__checkbox a{color:var(--white);text-decoration:underline}
+.enquire__submit{grid-column:1/-1;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;margin-top:.5rem}
+.enquire__status{font-size:.85rem;color:rgba(255,255,255,.75)}
+.enquire__status.is-error{color:#ff9d9d}
 
 /* ---------- Footer ---------- */
 .footer{background:var(--cream);padding:3rem 0 2rem;font-size:.85rem;color:var(--text-2)}
@@ -139,6 +153,7 @@ h2{line-height:1.05;letter-spacing:0}
   .space__body p{font-size:.85rem}
   .space__cap{font-size:.62rem;padding:.3rem .6rem}
   .faq__q{font-size:.95rem;padding:1.1rem 0}
+  .enquire__form{grid-template-columns:1fr}
   .footer__top{flex-direction:column;align-items:center;text-align:center}
   .footer{text-align:center}
 }
@@ -164,7 +179,7 @@ h2{line-height:1.05;letter-spacing:0}
     <p>Celebrate the end of the year with your team in one of Perth's most distinctive heritage precincts. Eight considered spaces across State Buildings, from intimate wine rooms to exclusive-use venues, each with seamless service tailored to your celebration.</p>
     <div class="hero__cta">
       <a class="btn btn--light" href="#spaces">See the spaces <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      <a class="btn btn--outline" style="color:#fff;border-color:rgba(255,255,255,.6)" href="https://statebuildings.com/contact?utm_source=lp&amp;utm_medium=referral&amp;utm_campaign=christmas-parties">Enquire now</a>
+      <a class="btn btn--outline" style="color:#fff;border-color:rgba(255,255,255,.6)" href="#enquire">Enquire now</a>
     </div>
     <div class="hero__proof">
       <span><strong>Eight</strong> Spaces, One Precinct</span>
@@ -208,7 +223,7 @@ h2{line-height:1.05;letter-spacing:0}
           <span class="space__tag">Group and Exclusive Hire</span>
           <h3>Postal Hall</h3>
           <p>Group dining, private dining or exclusive hire in the grand heart of the precinct. Ideal for a large cocktail celebration or a seated Christmas dinner beneath the heritage arches.</p>
-          <a class="space__link" href="https://statebuildings.com/contact?utm_source=lp&amp;utm_medium=referral&amp;utm_campaign=christmas-parties">Enquire now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <button class="space__link" data-venue="Postal Hall">Enquire now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
         </div>
       </div>
 
@@ -224,7 +239,7 @@ h2{line-height:1.05;letter-spacing:0}
           <span class="space__tag">Light-Filled and Flexible</span>
           <h3>The Mark</h3>
           <p>A refined, light-filled space designed for meaningful gatherings, where atmosphere, detail and setting come together for cocktail functions, seated dinners and conferences alike.</p>
-          <a class="space__link" href="https://statebuildings.com/contact?utm_source=lp&amp;utm_medium=referral&amp;utm_campaign=christmas-parties">Enquire now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <button class="space__link" data-venue="The Mark">Enquire now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
         </div>
       </div>
 
@@ -240,7 +255,7 @@ h2{line-height:1.05;letter-spacing:0}
           <span class="space__tag">Lively and Intimate</span>
           <h3>Beer Corner</h3>
           <p>A lively, intimate space for corporate functions and private events, surrounded by layers of history and driven by great beer.</p>
-          <a class="space__link" href="https://statebuildings.com/contact?utm_source=lp&amp;utm_medium=referral&amp;utm_campaign=christmas-parties">Enquire now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <button class="space__link" data-venue="Beer Corner">Enquire now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
         </div>
       </div>
 
@@ -255,7 +270,7 @@ h2{line-height:1.05;letter-spacing:0}
           <span class="space__tag">Underground and Intimate</span>
           <h3>Pooles Temple</h3>
           <p>All good things begin underground. A stylish, relaxed setting suited to cocktail-style events, corporate functions and product launches.</p>
-          <a class="space__link" href="https://statebuildings.com/contact?utm_source=lp&amp;utm_medium=referral&amp;utm_campaign=christmas-parties">Enquire now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <button class="space__link" data-venue="Pooles Temple">Enquire now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
         </div>
       </div>
 
@@ -271,7 +286,7 @@ h2{line-height:1.05;letter-spacing:0}
           <span class="space__tag">Refined and Relaxed</span>
           <h3>Wine Merchant</h3>
           <p>Tucked away from the city's bustle, a refined setting that feels considered yet relaxed, well suited to a more intimate end-of-year celebration.</p>
-          <a class="space__link" href="https://statebuildings.com/contact?utm_source=lp&amp;utm_medium=referral&amp;utm_campaign=christmas-parties">Enquire now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <button class="space__link" data-venue="Wine Merchant">Enquire now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
         </div>
       </div>
 
@@ -286,7 +301,7 @@ h2{line-height:1.05;letter-spacing:0}
           <span class="space__tag">Restaurant and Courtyard</span>
           <h3>Long Chim</h3>
           <p>Authentic Thai flavours with exclusive use of Long Chim's barrel-vaulted basement and high-walled courtyard, made for celebrating as a group.</p>
-          <a class="space__link" href="https://statebuildings.com/contact?utm_source=lp&amp;utm_medium=referral&amp;utm_campaign=christmas-parties">Enquire now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <button class="space__link" data-venue="Long Chim">Enquire now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
         </div>
       </div>
 
@@ -302,7 +317,7 @@ h2{line-height:1.05;letter-spacing:0}
           <span class="space__tag">Client Entertaining</span>
           <h3>State Cellars Wine Room</h3>
           <p>An intimate, wine-led private dining space for client entertaining and celebratory dinners, complemented by thoughtful menus, curated wines and discreet, professional service.</p>
-          <a class="space__link" href="https://statebuildings.com/contact?utm_source=lp&amp;utm_medium=referral&amp;utm_campaign=christmas-parties">Enquire now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <button class="space__link" data-venue="State Cellars Wine Room">Enquire now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
         </div>
       </div>
 
@@ -318,7 +333,7 @@ h2{line-height:1.05;letter-spacing:0}
           <span class="space__tag">Private Dining</span>
           <h3>Cape Arid Rooms</h3>
           <p>Light-filled and flexible, three interconnected rooms perfect for private dining, celebrations and meaningful moments, brought to life with curated menus and seamless service.</p>
-          <a class="space__link" href="https://statebuildings.com/contact?utm_source=lp&amp;utm_medium=referral&amp;utm_campaign=christmas-parties">Enquire now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <button class="space__link" data-venue="Cape Arid Rooms">Enquire now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
         </div>
       </div>
 
@@ -373,17 +388,100 @@ h2{line-height:1.05;letter-spacing:0}
   </div>
 </section>
 
-<!-- Closing enquire -->
-<section class="section enquire">
+<!-- Enquiry form -->
+<section class="section enquire" id="enquire">
   <div class="container container--narrow">
-    <p class="label">Talk to Our Events Team</p>
-    <h2>Enquire Now</h2>
-    <p>Share your guest numbers, preferred date and the style of celebration you have in mind, and our events team will help you find the right space for your Christmas party.</p>
-    <div class="enquire__contact">
-      <a href="tel:+61861687888">+61 8 6168 7888</a><br>
-      <a href="mailto:enquiries@statebuildings.com">enquiries@statebuildings.com</a>
+    <div class="section-head fade-up">
+      <p class="label">Talk to Our Events Team</p>
+      <h2>Enquire Now</h2>
+      <p>Share your guest numbers, preferred date and the style of celebration you have in mind, and our events team will help you find the right space for your Christmas party.</p>
     </div>
-    <a class="btn btn--light" href="https://statebuildings.com/contact?utm_source=lp&amp;utm_medium=referral&amp;utm_campaign=christmas-parties">Enquire now</a>
+
+    <form class="enquire__form fade-up" id="christmas-form" novalidate>
+      <div class="field">
+        <label for="firstName">First Name*</label>
+        <input type="text" id="firstName" name="firstName" autocomplete="given-name" required>
+        <span class="field-error" data-error-for="firstName"></span>
+      </div>
+      <div class="field">
+        <label for="lastName">Last Name*</label>
+        <input type="text" id="lastName" name="lastName" autocomplete="family-name" required>
+        <span class="field-error" data-error-for="lastName"></span>
+      </div>
+      <div class="field">
+        <label for="email">Email*</label>
+        <input type="email" id="email" name="email" autocomplete="email" required>
+        <span class="field-error" data-error-for="email"></span>
+      </div>
+      <div class="field">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" autocomplete="tel">
+        <span class="field-error" data-error-for="phone"></span>
+      </div>
+      <div class="field">
+        <label for="eventDate">Event Date*</label>
+        <input type="date" id="eventDate" name="eventDate" required>
+        <span class="field-error" data-error-for="eventDate"></span>
+      </div>
+      <div class="field">
+        <label for="estimatedGuestCount">Estimated Guest Count*</label>
+        <select id="estimatedGuestCount" name="estimatedGuestCount" required>
+          <option value="" disabled selected>Select an option</option>
+          <option value="1-20">1-20</option>
+          <option value="21-50">21-50</option>
+          <option value="51-70">51-70</option>
+          <option value="71-100">71-100</option>
+          <option value="100+">100+</option>
+        </select>
+        <span class="field-error" data-error-for="estimatedGuestCount"></span>
+      </div>
+      <div class="field field--full">
+        <label for="preferredVenue">Preferred Space</label>
+        <select id="preferredVenue" name="preferredVenue">
+          <option value="">No preference yet</option>
+          <option value="Postal Hall">Postal Hall</option>
+          <option value="The Mark">The Mark</option>
+          <option value="Beer Corner">Beer Corner</option>
+          <option value="Pooles Temple">Pooles Temple</option>
+          <option value="Wine Merchant">Wine Merchant</option>
+          <option value="Long Chim">Long Chim</option>
+          <option value="State Cellars Wine Room">State Cellars Wine Room</option>
+          <option value="Cape Arid Rooms">Cape Arid Rooms</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="occasion">Occasion</label>
+        <input type="text" id="occasion" name="occasion" value="Christmas Party">
+      </div>
+      <div class="field">
+        <label for="relationshipWithUs">How did you find out about us?</label>
+        <select id="relationshipWithUs" name="relationshipWithUs">
+          <option value="" selected>Select an option</option>
+          <option value="Google">Google</option>
+          <option value="Instagram">Instagram</option>
+          <option value="Facebook">Facebook</option>
+          <option value="Word of mouth">Word of mouth</option>
+          <option value="Previously visited">Previously visited</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div class="field field--full">
+        <label for="message">Message*</label>
+        <textarea id="message" name="message" placeholder="Please share any specific details about your event." required></textarea>
+        <span class="field-error" data-error-for="message"></span>
+      </div>
+      <div class="field field--full">
+        <label class="enquire__checkbox" for="agreeToTerms">
+          <input type="checkbox" id="agreeToTerms" name="agreeToTerms" required>
+          <span>I agree to the <a href="https://statebuildings.com/privacy-policy" target="_blank" rel="noopener">privacy policy</a> and terms of enquiry.*</span>
+        </label>
+        <span class="field-error" data-error-for="agreeToTerms"></span>
+      </div>
+      <div class="enquire__submit">
+        <button type="submit" class="btn btn--light" id="christmas-form-submit">Send Enquiry</button>
+        <span class="enquire__status" id="christmas-form-status" role="status" aria-live="polite"></span>
+      </div>
+    </form>
   </div>
 </section>
 
@@ -391,7 +489,7 @@ h2{line-height:1.05;letter-spacing:0}
   <div class="container">
     <div class="footer__top">
       <a class="footer__logo" href="https://statebuildings.com/" aria-label="State Buildings"><svg viewBox="0 0 171 51" fill="currentColor" aria-hidden="true"><use href="#sb-logo"/></svg></a>
-      <p>State Buildings, Cnr St Georges Tce and Barrack St, Perth WA 6000<br>+61 8 6168 7888 &middot; <a href="mailto:enquiries@statebuildings.com">enquiries@statebuildings.com</a><br><a href="https://statebuildings.com/events-weddings">Events and weddings</a> &middot; <a href="https://statebuildings.com/privacy-policy">Privacy Policy</a> &middot; <a href="https://statebuildings.com/terms-conditions">Terms and Conditions</a></p>
+      <p>State Buildings, Cnr St Georges Tce and Barrack St, Perth WA 6000<br><a href="https://statebuildings.com/events-weddings">Events and weddings</a> &middot; <a href="https://statebuildings.com/privacy-policy">Privacy Policy</a> &middot; <a href="https://statebuildings.com/terms-conditions">Terms and Conditions</a></p>
     </div>
     <p>The State Buildings acknowledge the traditional owners of this land on which we meet. We honour and respect the Whadjuk Noongar People and their continuing connection to this Country. We welcome all, and pay our deepest respects to Elders past and present, today and always.</p>
     <small>Hotel License, License No: 6010149386. Licensee: Treasury WA Pty Ltd, 28 Barrack St (cnr St Georges Tce) Perth WA 6000. Telephone +61 8 6168 7888. Warning: Under the Liquor Control Act 1988, it is an offence to sell or supply liquor to a person under the age of 18 years on licensed or regulated premises; or for a person under the age of 18 years to purchase, or attempt to purchase liquor on licensed or regulated premises.<br>&copy; 2026 State Buildings. All rights reserved.</small>
@@ -441,6 +539,121 @@ h2{line-height:1.05;letter-spacing:0}
       else { item.classList.add('is-open'); q.setAttribute('aria-expanded','true'); a.style.maxHeight=a.scrollHeight+'px'; }
     });
   });
+
+  // "Enquire now" buttons on space cards: pre-select the space and jump to the form
+  document.querySelectorAll('.space__link[data-venue]').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var sel=document.getElementById('preferredVenue');
+      if(sel){ sel.value=btn.getAttribute('data-venue'); }
+      document.getElementById('enquire').scrollIntoView({behavior:'smooth'});
+    });
+  });
+
+  // ---------- Enquiry form: posts to the client's own /api/contact endpoint ----------
+  var RECAPTCHA_KEY='6LerzuUsAAAAANYajMa5VUfF6LYfgH16b__1mm9Z';
+  var recaptchaLoaded=false, recaptchaLoading=false;
+  function loadRecaptcha(){
+    if(recaptchaLoaded||recaptchaLoading) return;
+    recaptchaLoading=true;
+    var s=document.createElement('script');
+    s.src='https://www.google.com/recaptcha/api.js?render='+RECAPTCHA_KEY;
+    s.onload=function(){ recaptchaLoaded=true; };
+    document.head.appendChild(s);
+  }
+  var form=document.getElementById('christmas-form');
+  if(form){
+    form.querySelectorAll('input,select,textarea').forEach(function(el){
+      el.addEventListener('focus',loadRecaptcha,{once:true});
+    });
+
+    function setError(name,msg){
+      var el=form.querySelector('[data-error-for="'+name+'"]');
+      if(el) el.textContent=msg||'';
+    }
+    function clearErrors(){
+      form.querySelectorAll('.field-error').forEach(function(el){ el.textContent=''; });
+    }
+    function validate(){
+      var ok=true;
+      var required=['firstName','lastName','email','eventDate','estimatedGuestCount','message'];
+      required.forEach(function(name){
+        var el=form.elements[name];
+        if(el && !el.value){ setError(name,'Required'); ok=false; }
+      });
+      var email=form.elements['email'];
+      if(email.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)){ setError('email','Enter a valid email'); ok=false; }
+      if(!form.elements['agreeToTerms'].checked){ setError('agreeToTerms','Please agree to continue'); ok=false; }
+      return ok;
+    }
+
+    async function getRecaptchaToken(){
+      try{
+        if(!recaptchaLoaded){ loadRecaptcha(); }
+        await new Promise(function(resolve,reject){
+          var tries=0;
+          (function poll(){
+            if(window.grecaptcha && window.grecaptcha.ready){ resolve(); return; }
+            if(++tries>40){ reject(new Error('recaptcha not ready')); return; }
+            setTimeout(poll,150);
+          })();
+        });
+        await new Promise(function(r){ window.grecaptcha.ready(r); });
+        return await window.grecaptcha.execute(RECAPTCHA_KEY,{action:'submit'});
+      }catch(e){
+        return '';
+      }
+    }
+
+    form.addEventListener('submit', async function(e){
+      e.preventDefault();
+      clearErrors();
+      var statusEl=document.getElementById('christmas-form-status');
+      var submitBtn=document.getElementById('christmas-form-submit');
+      if(!validate()){
+        statusEl.textContent='Please check the highlighted fields.';
+        statusEl.classList.add('is-error');
+        return;
+      }
+      statusEl.classList.remove('is-error');
+      statusEl.textContent='Sending...';
+      submitBtn.disabled=true;
+
+      var formData={
+        firstName: form.elements['firstName'].value,
+        lastName: form.elements['lastName'].value,
+        email: form.elements['email'].value,
+        phone: form.elements['phone'].value,
+        eventDate: form.elements['eventDate'].value,
+        estimatedGuestCount: form.elements['estimatedGuestCount'].value,
+        relationshipWithUs: form.elements['relationshipWithUs'].value,
+        preferredVenue: form.elements['preferredVenue'].value,
+        occasion: form.elements['occasion'].value,
+        message: form.elements['message'].value,
+        agreeToTerms: form.elements['agreeToTerms'].checked
+      };
+
+      var recaptchaToken=await getRecaptchaToken();
+
+      try{
+        var res=await fetch('https://statebuildings.com/api/contact',{
+          method:'POST',
+          headers:{'Content-Type':'application/json'},
+          body:JSON.stringify({formType:'event-venue-enquiry',formData:formData,recaptchaToken:recaptchaToken})
+        });
+        var json={};
+        try{ json=await res.json(); }catch(err){}
+        if(res.ok && json.success!==false){
+          window.location.assign('thank-you/');
+        } else {
+          throw new Error(json.message||'Something went wrong. Please try again.');
+        }
+      }catch(err){
+        statusEl.classList.add('is-error');
+        statusEl.textContent=(err && err.message) || 'Something went wrong. Please try again shortly.';
+        submitBtn.disabled=false;
+      }
+    });
+  }
 })();
 </script>
 </body>
